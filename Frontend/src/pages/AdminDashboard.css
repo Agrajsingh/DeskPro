@@ -1,0 +1,93 @@
+.admin-dashboard-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.admin-dashboard-content {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.admin-dashboard-main {
+  flex: 1;
+  padding: 2.5rem 2rem 2rem 2rem;
+  background: #f8fafc;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.admin-dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #166534;
+  margin-bottom: 2rem;
+}
+.admin-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.admin-dashboard-stat {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px rgba(34,197,94,0.08);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #166534;
+}
+.admin-dashboard-stat span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-top: 0.5rem;
+}
+.admin-dashboard-stat.green { border-left: 6px solid #22c55e; }
+.admin-dashboard-stat.blue { border-left: 6px solid #2563eb; }
+.admin-dashboard-stat.yellow { border-left: 6px solid #eab308; }
+.admin-dashboard-stat.red { border-left: 6px solid #dc2626; }
+.admin-dashboard-table-section {
+  margin-top: 2.5rem;
+}
+.admin-dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(34,197,94,0.06);
+}
+.admin-dashboard-table th, .admin-dashboard-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+.admin-dashboard-table th {
+  background: #bbf7d0;
+  color: #166534;
+  font-weight: 700;
+}
+.admin-dashboard-table tr:nth-child(even) {
+  background: #f0fdf4;
+}
+@media (max-width: 900px) {
+  .admin-dashboard-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .admin-dashboard-content {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .admin-dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+} 

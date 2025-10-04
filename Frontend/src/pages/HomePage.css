@@ -1,0 +1,183 @@
+/* Animated Gradient Background */
+.homepage-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background: linear-gradient(135deg, #14b8a6 0%, #1e3a8a 50%, #6d28d9 100%);
+  opacity: 0.9;
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.homepage-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #bbf7d0;
+  background: rgba(187, 247, 208, 0.95);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.homepage-navbar-left {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #166534;
+  letter-spacing: 0.1em;
+}
+.homepage-navbar-right a {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: #166534;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.homepage-navbar-right a:hover {
+  background: #86efac;
+}
+
+.homepage-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  min-height: 60vh;
+}
+
+.homepage-hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, #bbf7d0 0%, #bae6fd 100%);
+  animation: heroGradientMove 8s ease-in-out infinite;
+  opacity: 0.95;
+}
+@keyframes heroGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subtle dot pattern overlay for depth */
+.homepage-hero-pattern {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(37,99,235,0.07) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  opacity: 0.7;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2563eb;
+  text-shadow: 0 2px 8px #0001;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+.homepage-desc {
+  font-size: 1.125rem;
+  color: #334155;
+  margin-bottom: 2.5rem;
+  max-width: 36rem;
+}
+.homepage-btns {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+.homepage-btns a {
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.homepage-btns .user-login { background: #2563eb; }
+.homepage-btns .user-login:hover { background: #1d4ed8; }
+.homepage-btns .user-register { background: #22c55e; }
+.homepage-btns .user-register:hover { background: #16a34a; }
+.homepage-btns .admin-login { background: #a21caf; }
+.homepage-btns .admin-login:hover { background: #701a75; }
+
+.homepage-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #f8fafc;
+}
+.homepage-footer {
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  margin-top: auto;
+}
+
+.homepage-hero-card {
+  margin: 2.5rem auto 0 auto;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(37,99,235,0.10);
+  padding: 2.2rem 2.5rem;
+  max-width: 480px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  text-align: left;
+  border: 1.5px solid #e0e7ef;
+  cursor: pointer;
+  z-index: 1;
+}
+.homepage-hero-card:hover {
+  box-shadow: 0 8px 40px rgba(37,99,235,0.18);
+  transform: translateY(-4px) scale(1.025);
+  border-color: #2563eb;
+}
+.hero-card-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.7rem;
+}
+.hero-card-desc {
+  font-size: 1.08rem;
+  color: #334155;
+  line-height: 1.6;
+}
+@media (max-width: 600px) {
+  .homepage-hero-card {
+    padding: 1.2rem 1rem;
+    max-width: 98vw;
+  }
+  .hero-card-title {
+    font-size: 1.1rem;
+  }
+  .hero-card-desc {
+    font-size: 0.98rem;
+  }
+  .homepage-title {
+    font-size: 2rem;
+  }
+} 

@@ -1,0 +1,149 @@
+.light {
+  --bg: #f5f7fa;
+  --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --text: #2d3748;
+  --text-secondary: #4a5568;
+  --card-bg: #fff;
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 8px 32px rgba(0,0,0,0.12);
+  --button-bg: #2563eb;
+  --button-bg-hover: #1e40af;
+  --button-text: #fff;
+}
+
+.dark {
+  --bg: #181a1b;
+  --bg-gradient: linear-gradient(135deg, #232526 0%, #414345 100%);
+  --text: #f5f7fa;
+  --text-secondary: #c3cfe2;
+  --card-bg: #23272f;
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.32);
+  --card-shadow-hover: 0 8px 32px rgba(0,0,0,0.44);
+  --button-bg: #2563eb;
+  --button-bg-hover: #1e40af;
+  --button-text: #fff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-gradient);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+  color: var(--text);
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  animation: slideUp 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  animation: slideUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--card-shadow);
+  padding: 2rem 2.5rem;
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  animation: fadeIn 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  color: var(--text);
+}
+
+.card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: scale(1.06);
+}
+
+.cta {
+  margin-top: 2rem;
+  animation: fadeIn 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ctaButton {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background: var(--button-bg-hover);
+  box-shadow: 0 4px 24px rgba(37,99,235,0.18);
+  transform: scale(1.05);
+}
+
+.waveWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waveHand {
+  display: block;
+}
+
+.waveMotion {
+  transform-origin: bottom center;
+  animation: waveHand 1.6s infinite cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(18deg); }
+  20% { transform: rotate(-12deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .card {
+    padding: 1.2rem 1rem;
+  }
+} 

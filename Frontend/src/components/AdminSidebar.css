@@ -1,0 +1,38 @@
+.admin-sidebar {
+  background: #e6fbe6;
+  width: 220px;
+  min-height: 100vh;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: 2px 0 8px rgba(34,197,94,0.08);
+}
+.admin-sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #166534;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  text-align: left;
+}
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.admin-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #166534;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.08rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  transition: background 0.18s;
+}
+.admin-sidebar-link:hover {
+  background: #bbf7d0;
+} 
